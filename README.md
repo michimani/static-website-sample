@@ -18,6 +18,8 @@ You can create a static web site hosted on S3 using this project.
     cp stack-config.yml.sample stack-config.yml
     ```
 
+    Set environment variables in the following yaml format.
+
     ```
     common:
       region: <deploy-target-region> eg: ap-northeast-1
@@ -28,7 +30,7 @@ You can create a static web site hosted on S3 using this project.
       sub_domain: <hostname-of-sub-domain (optional)> eg: static-website-sample (if you want to host this site as "static-website-sample.example.com")
     ```
 
-  You can check the values ​​of `route53.zone` and `route53.zone_id` in the Route 53 management console.
+    You can check the values ​​of `route53.zone` and `route53.zone_id` in the Route 53 management console.
 
 2. build
 
