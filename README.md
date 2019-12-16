@@ -8,40 +8,41 @@ You can create a static web site hosted on S3 using this project.
 
 0. prepare
 
-    ```
-    cdk bootstrap
+    ```console
+    $ npm install
+    $ cdk bootstrap
     ```
 
 1. create config file
 
-    ```
-    cp stack-config.yml.sample stack-config.yml
+    ```console
+    $ cp stack-config.yml.sample stack-config.yml
     ```
 
     Set environment variables in the following yaml format.
 
-    ```
+    ```yaml
     common:
-      region: <deploy-target-region> eg: ap-northeast-1
+      region: <deploy-target-region> #eg: ap-northeast-1
 
     route53:
-      zone: <existed-hosted-zone-name> eg: example.com
-      zone_id: <existed-hosted-zone-id> eg: ABCD123467890
-      sub_domain: <hostname-of-sub-domain (optional)> eg: static-website-sample (if you want to host this site as "static-website-sample.example.com")
+      zone: <existed-hosted-zone-name> #eg: example.com
+      zone_id: <existed-hosted-zone-id> #eg: ABCD123467890
+      sub_domain: <hostname-of-sub-domain (optional)> #eg: static-website-sample (if you want to host this site as "static-website-sample.example.com")
     ```
 
     You can check the values ​​of `route53.zone` and `route53.zone_id` in the Route 53 management console.
 
 2. build
 
-    ```
-    cdk synth
+    ```console
+    $ cdk synth
     ```
 
 3. deploy
 
-    ```
-    cdk deploy
+    ```console
+    $ cdk deploy
     ```
 
 4. check
