@@ -1,14 +1,47 @@
-# Welcome to your CDK TypeScript project!
+static-website-sample
+===
 
-This is a blank project for TypeScript development with CDK.
+This is a sample project for TypeScript development with CDK.  
+You can create a static web site hosted on S3 using this project.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+# Usase
 
-## Useful commands
+0. prepare
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+    ```
+    cdk bootstrap
+    ```
+
+1. create config file
+
+    ```
+    cp stack-config.yml.sample stack-config.yml
+    ```
+
+    ```
+    common:
+      region: <deploy-target-region> eg: ap-northeast-1
+
+    route53:
+      zone: <existed-hosted-zone-name> eg: example.com
+      zone_id: <existed-hosted-zone-id> eg: ABCD123467890
+      sub_domain: <hostname-of-sub-domain (optional)> eg: static-website-sample (if you want to host this site as "static-website-sample.example.com")
+    ```
+
+  You can check the values ​​of `route53.zone` and `route53.zone_id` in the Route 53 management console.
+
+2. build
+
+    ```
+    cdk synth
+    ```
+
+3. deploy
+
+    ```
+    cdk deploy
+    ```
+
+4. check
+
+    Access the domain you set up (rg: `static-website-sample.example.com`), and check if the web page is displayed correctly.
