@@ -17,7 +17,8 @@ export class StaticWebsiteSampleStack extends cdk.Stack {
       bucketName,
       publicReadAccess: true,
       websiteIndexDocument: 'index.html',
-      websiteErrorDocument: 'error.html'
+      websiteErrorDocument: 'error.html',
+      removalPolicy: cdk.RemovalPolicy.DESTROY
     });
 
     // Put sample html files
