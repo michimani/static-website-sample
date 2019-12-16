@@ -13,7 +13,7 @@ export class StaticWebsiteSampleStack extends cdk.Stack {
 
     // create a S3 bucket
     const bucketName: string = (useSubDomain === true) ? `${stackConfig.route53.sub_domain}.${stackConfig.route53.zone}` : stackConfig.route53.zone;
-    const bucket: s3.Bucket = new s3.Bucket(this, 'CDKSampleBucket', {
+    const bucket: s3.Bucket = new s3.Bucket(this, 'StaticWebsiteSampleBucket', {
       bucketName,
       publicReadAccess: true,
       websiteIndexDocument: 'index.html',
@@ -39,6 +39,6 @@ export class StaticWebsiteSampleStack extends cdk.Stack {
       recordName: (useSubDomain === true) ? stackConfig.route53.sub_domain : stackConfig.route53.zone
     }
 
-    const hostRecord = new route53.ARecord(this, 'SampleRecord', record);
+    const hostRecord = new route53.ARecord(this, 'StaticWebsiteSampleRecord', record);
   }
 }
