@@ -1,5 +1,4 @@
 common:
-  account_id: <deploy-target-aws-account-id>
   region: <deploy-target-region>
 
 route53:
