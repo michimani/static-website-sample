@@ -11,24 +11,24 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.27.0",
-    "@types/jest": "^25.1.4",
-    "@types/node": "13.9.1",
-    "aws-cdk": "^1.27.0",
-    "jest": "^25.1.0",
-    "ts-jest": "^25.2.1",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.8.3"
+    "@aws-cdk/assert": "^1.95.1",
+    "@types/jest": "^26.0.22",
+    "@types/node": "14.14.37",
+    "aws-cdk": "^1.95.1",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-route53": "^1.27.0",
-    "@aws-cdk/aws-route53-targets": "^1.27.0",
-    "@aws-cdk/aws-s3": "^1.27.0",
-    "@aws-cdk/aws-s3-deployment": "^1.27.0",
-    "@aws-cdk/core": "^1.27.0",
-    "@types/js-yaml": "^3.12.2",
-    "js-yaml": "^3.13.1",
+    "@aws-cdk/aws-route53": "^1.95.1",
+    "@aws-cdk/aws-route53-targets": "^1.95.1",
+    "@aws-cdk/aws-s3": "^1.95.1",
+    "@aws-cdk/aws-s3-deployment": "^1.95.1",
+    "@aws-cdk/core": "^1.95.1",
+    "@types/js-yaml": "^4.0.0",
+    "js-yaml": "^4.0.0",
     "minimist": "^1.2.5",
-    "source-map-support": "^0.5.16"
+    "source-map-support": "^0.5.19"
   }
 }
